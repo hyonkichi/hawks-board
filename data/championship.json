@@ -1,8 +1,8 @@
 {
   "sample": false,
-  "updated_at": "2026-09-16T00:02:26+09:00",
+  "updated_at": "2026-09-16T00:56:40+09:00",
   "as_of": "9月13日終了時点",
-  "current": 95.9,
+  "current": 95.8,
   "delta": null,
   "context": {
     "rank": 1,
@@ -15,7 +15,7 @@
   "history": [
     {
       "date": "9/13",
-      "value": 95.9
+      "value": 95.78
     }
   ],
   "scenarios": [
@@ -29,11 +29,11 @@
     },
     {
       "label": "5割ペース",
-      "value": 90.7
+      "value": 90.9
     },
     {
       "label": "3割ペース",
-      "value": 61.4
+      "value": 61.5
     }
   ],
   "league": [
@@ -41,7 +41,7 @@
       "name": "ソフトバンク",
       "record": "74勝52敗4分",
       "remaining": 10,
-      "champ": 95.9,
+      "champ": 95.8,
       "delta": null,
       "me": true
     },
@@ -57,7 +57,7 @@
       "name": "日本ハム",
       "record": "69勝57敗5分",
       "remaining": 10,
-      "champ": 0.8,
+      "champ": 0.9,
       "delta": null,
       "me": false
     },
