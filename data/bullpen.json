@@ -1,0 +1,203 @@
+{
+  "sample": true,
+  "updated_at": "2026-09-16T00:03:06+09:00",
+  "as_of": "9月15日終了時点",
+  "game_note": "次戦：9月13日 18:00（みずほPayPayドーム）※この行は次の試合の予定に差し替えます",
+  "pitchers": [
+    {
+      "name": "投手A",
+      "role": "クローザー",
+      "status": "rest",
+      "pitches_3d": 41,
+      "consecutive": 3,
+      "days_rest": 0,
+      "note": "3連投中。次戦は回避が濃厚",
+      "recent": [
+        {
+          "date": "9/6",
+          "pitches": 0
+        },
+        {
+          "date": "9/7",
+          "pitches": 14
+        },
+        {
+          "date": "9/8",
+          "pitches": 0
+        },
+        {
+          "date": "9/9",
+          "pitches": 0
+        },
+        {
+          "date": "9/10",
+          "pitches": 12
+        },
+        {
+          "date": "9/11",
+          "pitches": 16
+        },
+        {
+          "date": "9/12",
+          "pitches": 13
+        }
+      ]
+    },
+    {
+      "name": "投手B",
+      "role": "セットアッパー",
+      "status": "caution",
+      "pitches_3d": 28,
+      "consecutive": 2,
+      "days_rest": 0,
+      "note": "2連投。3連投は今季なし",
+      "recent": [
+        {
+          "date": "9/6",
+          "pitches": 18
+        },
+        {
+          "date": "9/7",
+          "pitches": 0
+        },
+        {
+          "date": "9/8",
+          "pitches": 0
+        },
+        {
+          "date": "9/9",
+          "pitches": 11
+        },
+        {
+          "date": "9/10",
+          "pitches": 0
+        },
+        {
+          "date": "9/11",
+          "pitches": 15
+        },
+        {
+          "date": "9/12",
+          "pitches": 13
+        }
+      ]
+    },
+    {
+      "name": "投手C",
+      "role": "左のワンポイント",
+      "status": "ready",
+      "pitches_3d": 9,
+      "consecutive": 0,
+      "days_rest": 2,
+      "note": "",
+      "recent": [
+        {
+          "date": "9/6",
+          "pitches": 0
+        },
+        {
+          "date": "9/7",
+          "pitches": 21
+        },
+        {
+          "date": "9/8",
+          "pitches": 0
+        },
+        {
+          "date": "9/9",
+          "pitches": 0
+        },
+        {
+          "date": "9/10",
+          "pitches": 9
+        },
+        {
+          "date": "9/11",
+          "pitches": 0
+        },
+        {
+          "date": "9/12",
+          "pitches": 0
+        }
+      ]
+    },
+    {
+      "name": "投手D",
+      "role": "ロングリリーフ",
+      "status": "caution",
+      "pitches_3d": 34,
+      "consecutive": 0,
+      "days_rest": 1,
+      "note": "前回34球。中2日は空けたい",
+      "recent": [
+        {
+          "date": "9/6",
+          "pitches": 0
+        },
+        {
+          "date": "9/7",
+          "pitches": 0
+        },
+        {
+          "date": "9/8",
+          "pitches": 26
+        },
+        {
+          "date": "9/9",
+          "pitches": 0
+        },
+        {
+          "date": "9/10",
+          "pitches": 0
+        },
+        {
+          "date": "9/11",
+          "pitches": 34
+        },
+        {
+          "date": "9/12",
+          "pitches": 0
+        }
+      ]
+    },
+    {
+      "name": "投手E",
+      "role": "ビハインド担当",
+      "status": "ready",
+      "pitches_3d": 0,
+      "consecutive": 0,
+      "days_rest": 5,
+      "note": "5日間登板なし",
+      "recent": [
+        {
+          "date": "9/6",
+          "pitches": 0
+        },
+        {
+          "date": "9/7",
+          "pitches": 22
+        },
+        {
+          "date": "9/8",
+          "pitches": 0
+        },
+        {
+          "date": "9/9",
+          "pitches": 0
+        },
+        {
+          "date": "9/10",
+          "pitches": 0
+        },
+        {
+          "date": "9/11",
+          "pitches": 0
+        },
+        {
+          "date": "9/12",
+          "pitches": 0
+        }
+      ]
+    }
+  ]
+}

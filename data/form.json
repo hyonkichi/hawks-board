@@ -1,0 +1,57 @@
+{
+  "sample": true,
+  "updated_at": "2026-09-16T00:03:06+09:00",
+  "as_of": "9月15日終了時点",
+  "batters": [
+    {
+      "name": "選手I",
+      "metric": "OPS",
+      "recent": ".000",
+      "season": ".000",
+      "diff_ratio": 0.85,
+      "note": "直近10試合で長打が増えている"
+    },
+    {
+      "name": "選手J",
+      "metric": "OPS",
+      "recent": ".000",
+      "season": ".000",
+      "diff_ratio": 0.42,
+      "note": ""
+    },
+    {
+      "name": "選手K",
+      "metric": "OPS",
+      "recent": ".000",
+      "season": ".000",
+      "diff_ratio": -0.31,
+      "note": "四球が減って早打ちぎみ"
+    },
+    {
+      "name": "選手L",
+      "metric": "OPS",
+      "recent": ".000",
+      "season": ".000",
+      "diff_ratio": -0.78,
+      "note": "3週間ノーアーチ"
+    }
+  ],
+  "pitchers": [
+    {
+      "name": "投手M",
+      "metric": "被OPS",
+      "recent": ".000",
+      "season": ".000",
+      "diff_ratio": 0.64,
+      "note": "直近3登板は無失点"
+    },
+    {
+      "name": "投手N",
+      "metric": "被OPS",
+      "recent": ".000",
+      "season": ".000",
+      "diff_ratio": -0.55,
+      "note": "四球率が上がっている"
+    }
+  ]
+}

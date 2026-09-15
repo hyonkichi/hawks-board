@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>タカボード｜ホークスを数字で追う非公式ファンサイト</title>
+<meta name="description" content="福岡ソフトバンクホークスの優勝確率、ブルペンの稼働状況、ファーム昇格候補、選手の好不調を毎日まとめて見られる非公式のファンサイトです。">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="canonical" href="https://example.github.io/hawks-board/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="タカボード｜ホークスを数字で追う">
+<meta property="og:description" content="優勝確率・ブルペン稼働・ファーム昇格候補・好不調を毎日更新（非公式ファンサイト）">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FFFFFF'/%3E%3Cpath d='M8 20l5-9 4 5 3-4 4 8z' fill='%2396670A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M6 21l6-11 4.5 6L21 11l5 10z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text">
+        <b>タカボード</b>
+        <small>ホークスを数字で追う非公式ファンサイト</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="セクション">
+      <a href="#pennant">優勝確率</a>
+      <a href="#bullpen">ブルペン</a>
+      <a href="#farm">昇格候補</a>
+      <a href="#form">好不調</a>
+      <a href="#reads">読みもの</a>
+    </nav>
+  </div>
+  <p class="unofficial">このサイトは個人が運営するファンサイトです。球団・NPBとは関係ありません。</p>
+</header>
+
+<div id="sample-banner" class="banner" hidden>
+  表示中の数値はレイアウト確認用のサンプルです。実データはまだ接続されていません。
+</div>
+
+<main id="main">
+
+  <!-- 今日の要点 -->
+  <section id="today" class="today" aria-label="今日の要点">
+    <div class="wrap">
+      <p id="today-game" class="next-game">次戦の情報を読み込んでいます</p>
+      <div class="today-grid">
+        <div class="today-main">
+          <h2 class="today-label">優勝確率</h2>
+          <p class="prob"><span id="pennant-value">--</span><span class="unit">%</span></p>
+          <p id="pennant-delta" class="delta">前日比 --</p>
+        </div>
+        <ul class="today-side">
+          <li>
+            <a href="#bullpen">
+              <span class="side-label">今日投げられる投手</span>
+              <span class="side-val" id="today-pen">--</span>
+              <span class="side-sub" id="today-pen-sub">読み込み中</span>
+            </a>
+          </li>
+          <li>
+            <a href="#form">
+              <span class="side-label">上り調子</span>
+              <span class="side-val" id="today-hot">--</span>
+              <span class="side-sub" id="today-hot-sub">読み込み中</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 優勝確率 -->
+  <section id="pennant" class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>優勝確率</h2>
+        <p class="stamp" data-updated="pennant">読み込み中</p>
+      </div>
+
+      <div class="pennant-grid">
+        <figure class="trend">
+          <figcaption class="trend-cap">この1か月の推移</figcaption>
+          <div id="pennant-chart" class="chart" role="img" aria-label="優勝確率の推移グラフ"></div>
+        </figure>
+        <dl id="pennant-context" class="facts"></dl>
+      </div>
+
+      <div class="scenarios">
+        <h3>残り試合の勝ちペース別</h3>
+        <ul id="pennant-scenarios" class="scenario-list"></ul>
+      </div>
+
+      <div class="league">
+        <h3>パ・リーグ6球団</h3>
+        <table id="league-table">
+          <thead>
+            <tr><th>チーム</th><th>成績</th><th></th><th>確率</th><th>前日比</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <p id="pennant-method" class="method"></p>
+    </div>
+  </section>
+
+  <!-- ブルペン -->
+  <section id="bullpen" class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>ブルペン稼働状況</h2>
+        <p class="stamp" data-updated="bullpen">読み込み中</p>
+      </div>
+      <p id="bullpen-note" class="lead"></p>
+
+      <div class="legend" aria-hidden="true">
+        <span><i class="dot ready"></i>余力あり</span>
+        <span><i class="dot caution"></i>やや疲労</span>
+        <span><i class="dot rest"></i>要休養</span>
+      </div>
+
+      <div id="bullpen-list" class="pen"></div>
+      <p class="method">直近7日の球数を1日1本の棒で表示しています。棒がない日は登板なし、色の濃い棒は25球以上を投げた日です。</p>
+    </div>
+  </section>
+
+  <!-- ファーム昇格予想 -->
+  <section id="farm" class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>ファーム昇格予想</h2>
+        <p class="stamp" data-updated="farm">読み込み中</p>
+      </div>
+      <p class="lead">二軍の成績と一軍の空き具合から、次に上がってきそうな選手を並べています。</p>
+      <ol id="farm-list" class="farm"></ol>
+    </div>
+  </section>
+
+  <!-- 好不調 -->
+  <section id="form" class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>選手の好不調</h2>
+        <p class="stamp" data-updated="form">読み込み中</p>
+      </div>
+      <p class="lead">直近10試合の成績をシーズン平均と比べています。右に伸びているほど調子が上向きです。</p>
+
+      <div class="tabs" role="tablist" aria-label="表示する選手">
+        <button role="tab" id="tab-batters" aria-controls="panel-batters" aria-selected="true" class="tab is-on">野手</button>
+        <button role="tab" id="tab-pitchers" aria-controls="panel-pitchers" aria-selected="false" class="tab">投手</button>
+      </div>
+      <div id="panel-batters" role="tabpanel" aria-labelledby="tab-batters"><div id="form-batters" class="form-list"></div></div>
+      <div id="panel-pitchers" role="tabpanel" aria-labelledby="tab-pitchers" hidden><div id="form-pitchers" class="form-list"></div></div>
+    </div>
+  </section>
+
+  <!-- 読みもの -->
+  <section id="reads" class="section reads">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>読みもの</h2>
+      </div>
+      <p class="lead">数字を見ていて気づいたことは note に書いています。ダッシュボードには載らない、試合の流れや起用の話が中心です。</p>
+      <ul id="reads-list" class="reads-list"></ul>
+      <p><a class="btn" href="https://note.com/" rel="noopener">note の記事一覧を見る</a></p>
+    </div>
+  </section>
+
+  <!-- 要望 -->
+  <section id="voice" class="section voice">
+    <div class="wrap">
+      <h2>ほしい数字、教えてください</h2>
+      <p class="lead">「この選手も入れてほしい」「この見方は違うのでは」といった声で内容を決めています。数字の誤りの指摘も歓迎です。</p>
+      <ul class="contact">
+        <li><a class="btn" href="https://forms.gle/" rel="noopener">フォームで送る</a><span>名前なしで送れます。返信はしていません。</span></li>
+        <li><a href="https://github.com/" rel="noopener">GitHub の Issue を立てる</a><span>不具合や計算方法の議論はこちらが向いています。</span></li>
+        <li><a href="https://x.com/" rel="noopener">X で伝える</a><span>更新のお知らせもここに流しています。</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-lead">タカボードは、ひとりのホークスファンが趣味で作っている非公式サイトです。</p>
+    <ul class="foot-links">
+      <li><a href="about.html">このサイトについて</a></li>
+      <li><a href="about.html#data">データの出典と精度</a></li>
+      <li><a href="about.html#rights">著作権・商標について</a></li>
+      <li><a href="about.html#privacy">プライバシー</a></li>
+    </ul>
+    <p class="foot-note">福岡ソフトバンクホークスおよび日本野球機構とは一切関係がありません。チーム名・選手名は事実を示す目的でのみ使用しています。掲載する数値は公開情報をもとにした独自集計で、正確性を保証するものではありません。</p>
+    <p class="foot-copy">&copy; <span id="year">2026</span> タカボード</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

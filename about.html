@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>このサイトについて｜タカボード</title>
+<meta name="description" content="タカボードの運営方針、データの出典と精度、著作権・商標の扱い、プライバシー、ご要望の送り先をまとめています。">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FFFFFF'/%3E%3Cpath d='M8 20l5-9 4 5 3-4 4 8z' fill='%2396670A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .doc{padding:2.25rem 0 3rem}
+  .doc h1{font-size:1.6rem;margin-bottom:.5rem}
+  .doc h2{font-size:1.1rem;margin:2.2rem 0 .6rem}
+  .doc h2::before{content:"";display:inline-block;width:.4rem;height:.4rem;background:var(--muted);margin-right:.5rem;transform:rotate(45deg);vertical-align:middle}
+  .doc p,.doc li{font-size:.92rem;max-width:40em}
+  .doc p+p{margin-top:.7rem}
+  .doc .bullets{margin:.6rem 0}
+  .doc .bullets li{padding-left:1rem;position:relative;margin-bottom:.35rem}
+  .doc .bullets li::before{content:"";position:absolute;left:0;top:.85em;width:.35rem;height:1px;background:var(--muted)}
+  .doc dl.qa div{border-top:1px solid var(--line);padding:.9rem 0}
+  .doc dl.qa dt{font-weight:700;font-size:.95rem;margin-bottom:.3rem}
+  .doc dl.qa dd{margin:0;color:var(--muted);font-size:.88rem}
+  .backlink{font-size:.85rem;color:var(--muted);display:inline-block;margin-bottom:1.2rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28"><path d="M6 21l6-11 4.5 6L21 11l5 10z" fill="currentColor"/></svg></span>
+      <span class="brand-text"><b>タカボード</b><small>ホークスを数字で追う非公式ファンサイト</small></span>
+    </a>
+    <nav class="nav" aria-label="セクション">
+      <a href="index.html#pennant">優勝確率</a>
+      <a href="index.html#bullpen">ブルペン</a>
+      <a href="index.html#farm">昇格候補</a>
+      <a href="index.html#form">好不調</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <a class="backlink" href="./">ダッシュボードに戻る</a>
+    <h1>このサイトについて</h1>
+    <p>タカボードは、福岡ソフトバンクホークスの試合をもっと面白く見るために、個人が作っている非公式のファンサイトです。球団、日本野球機構、その他どの団体とも関係がありません。</p>
+    <p>試合前に「今日は誰が投げられるのか」「この選手は上がってきそうか」を30秒で確かめられること、それだけを目指しています。</p>
+
+    <h2 id="data">データの出典と精度</h2>
+    <p>掲載している数値は、公開されている試合結果や個人成績をもとにした独自集計です。集計と計算はすべて運営者が書いたプログラムで自動処理しています。</p>
+    <ul class="bullets">
+      <li>更新は1日1回、試合翌日の早朝です。各セクションの右上に集計時点を出しています。</li>
+      <li>優勝確率は、残り試合を5万回シミュレーションして優勝した割合です。各試合の勝敗は両チームの勝率から求めた確率で決め、先発投手や対戦相性、本拠地かどうかは考慮していません。予言ではなく「今の実力と日程ならこのくらい」という目安として見てください。</li>
+      <li>優勝確率のもとになる勝敗数と残り対戦カードは、運営者が毎日手で入力しています。入力ミスの可能性があります。</li>
+      <li>マジックナンバーは勝ち数ベースの簡易計算です。実際のNPBは勝率で順位を決めるため、公式発表とずれることがあります。</li>
+      <li>ブルペンの状態（余力あり／やや疲労／要休養）は、連投日数と球数から機械的に判定したものです。実際の起用可否とは異なります。</li>
+      <li>ファーム昇格予想は独自の指数によるもので、球団の方針とは無関係です。</li>
+      <li>取得元のデータが変わったり、集計が誤っていたりする可能性があります。正確性は保証できません。</li>
+    </ul>
+    <p>数字がおかしいと感じたら、下の受付から教えてください。直したときは X で報告します。</p>
+
+    <h2 id="rights">著作権・商標について</h2>
+    <ul class="bullets">
+      <li>チーム名・選手名・球場名は、事実を説明する目的でのみ使用しています。各権利者の商標です。</li>
+      <li>球団や関係団体のロゴ、マーク、写真、映像は使用していません。配色やデザインも各球団の意匠とは無関係のものにしています。</li>
+      <li>選手の顔写真・肖像は掲載しません。</li>
+      <li>試合の実況テキストや記事本文の転載はしません。掲載しているのは、公開されている成績から計算した数値と、運営者自身の文章だけです。</li>
+      <li>このサイトのソースコードと文章の著作権は運営者にあります。数値の引用は出典としてこのサイトのURLを示していただければ自由にどうぞ。</li>
+      <li>権利者の方で掲載内容に問題があると判断された場合は、下の受付からご連絡ください。確認のうえ速やかに対応します。</li>
+    </ul>
+
+    <h2 id="disclaimer">免責</h2>
+    <p>このサイトの情報を使ったこと、または使えなかったことで生じた損害について、運営者は責任を負いません。とくに、賭けごとやファンタジーゲームの判断材料として使った結果については一切関知しません。</p>
+    <p>予告なく内容の変更や公開の停止をすることがあります。</p>
+
+    <h2 id="privacy">プライバシー</h2>
+    <p>このサイトは GitHub Pages で公開しています。閲覧にあたって、運営者が氏名やメールアドレスを集めることはありません。ログイン機能もありません。</p>
+    <ul class="bullets">
+      <li>アクセス解析を導入している場合は、閲覧ページ数など個人を特定しない統計のみを見ています。</li>
+      <li>ご要望フォームは外部サービス（Googleフォーム）を使っています。送信内容の扱いはそのサービスの規約に従います。名前を書かずに送れます。</li>
+      <li>外部サイトへのリンク先での出来事については責任を負いません。</li>
+    </ul>
+
+    <h2 id="contact">ご要望・不具合の受付</h2>
+    <p>返信はしていませんが、全部読んでいます。次に作るものはここに届いた声から決めています。</p>
+    <dl class="qa">
+      <div>
+        <dt>数字が違う／表示が崩れる</dt>
+        <dd>どのセクションか、いつ見たかを添えてフォームか GitHub の Issue へ。スマートフォンの機種名があると助かります。</dd>
+      </div>
+      <div>
+        <dt>この項目も見たい</dt>
+        <dd>フォームへ。実装は週末に少しずつ進めているので、すぐには入りません。</dd>
+      </div>
+      <div>
+        <dt>計算方法を詳しく知りたい</dt>
+        <dd>GitHub のリポジトリにコードを公開しています。Issue で質問してください。</dd>
+      </div>
+      <div>
+        <dt>権利に関する連絡</dt>
+        <dd>フォームの本文に「権利について」とお書きください。優先して確認します。</dd>
+      </div>
+    </dl>
+    <p><a class="btn" href="https://forms.gle/" rel="noopener">フォームを開く</a></p>
+
+    <h2 id="who">運営者</h2>
+    <p>埼玉在住のホークスファンひとりで運営しています。本業は別にあり、平日の夜と週末に少しずつ作っています。更新の予定や作業の様子は X に書いています。</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="./">ダッシュボード</a></li>
+      <li><a href="https://x.com/" rel="noopener">X</a></li>
+      <li><a href="https://note.com/" rel="noopener">note</a></li>
+      <li><a href="https://github.com/" rel="noopener">GitHub</a></li>
+    </ul>
+    <p class="foot-note">福岡ソフトバンクホークスおよび日本野球機構とは一切関係がありません。</p>
+    <p class="foot-copy">&copy; 2026 タカボード</p>
+  </div>
+</footer>
+</body>
+</html>

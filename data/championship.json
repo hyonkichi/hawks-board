@@ -1,0 +1,89 @@
+{
+  "sample": false,
+  "updated_at": "2026-09-16T00:02:26+09:00",
+  "as_of": "9月13日終了時点",
+  "current": 95.9,
+  "delta": null,
+  "context": {
+    "rank": 1,
+    "games_behind": 0,
+    "magic": 7,
+    "remaining": 10,
+    "record": "74勝52敗4分"
+  },
+  "method": "残り試合を50,000回シミュレートして算出しています。各試合の勝敗は両チームの勝率からlog5で求めた確率で判定し、引き分けは4%で発生させています。先発投手、対戦カード別の相性、本拠地かどうかは考慮していません。マジックナンバーは勝ち数ベースの目安です。",
+  "history": [
+    {
+      "date": "9/13",
+      "value": 95.9
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "残り全勝",
+      "value": 100.0
+    },
+    {
+      "label": "7割ペース",
+      "value": 99.2
+    },
+    {
+      "label": "5割ペース",
+      "value": 90.7
+    },
+    {
+      "label": "3割ペース",
+      "value": 61.4
+    }
+  ],
+  "league": [
+    {
+      "name": "ソフトバンク",
+      "record": "74勝52敗4分",
+      "remaining": 10,
+      "champ": 95.9,
+      "delta": null,
+      "me": true
+    },
+    {
+      "name": "西武",
+      "record": "70勝56敗3分",
+      "remaining": 10,
+      "champ": 3.3,
+      "delta": null,
+      "me": false
+    },
+    {
+      "name": "日本ハム",
+      "record": "69勝57敗5分",
+      "remaining": 10,
+      "champ": 0.8,
+      "delta": null,
+      "me": false
+    },
+    {
+      "name": "楽天",
+      "record": "63勝63敗3分",
+      "remaining": 10,
+      "champ": 0.0,
+      "delta": null,
+      "me": false
+    },
+    {
+      "name": "ロッテ",
+      "record": "58勝68敗4分",
+      "remaining": 10,
+      "champ": 0.0,
+      "delta": null,
+      "me": false
+    },
+    {
+      "name": "オリックス",
+      "record": "55勝71敗2分",
+      "remaining": 10,
+      "champ": 0.0,
+      "delta": null,
+      "me": false
+    }
+  ]
+}
