@@ -1,21 +1,25 @@
 {
   "sample": false,
-  "updated_at": "2026-09-16T00:56:40+09:00",
-  "as_of": "9月13日終了時点",
-  "current": 95.8,
-  "delta": null,
+  "updated_at": "2026-09-16T02:51:23+09:00",
+  "as_of": "9月15日終了時点",
+  "current": 100.0,
+  "delta": 4.2,
   "context": {
     "rank": 1,
     "games_behind": 0,
-    "magic": 7,
-    "remaining": 10,
-    "record": "74勝52敗4分"
+    "magic": 3,
+    "remaining": 13,
+    "record": "82勝45敗3分"
   },
   "method": "残り試合を50,000回シミュレートして算出しています。各試合の勝敗は両チームの勝率からlog5で求めた確率で判定し、引き分けは4%で発生させています。先発投手、対戦カード別の相性、本拠地かどうかは考慮していません。マジックナンバーは勝ち数ベースの目安です。",
   "history": [
     {
       "date": "9/13",
       "value": 95.78
+    },
+    {
+      "date": "9/15",
+      "value": 100.0
     }
   ],
   "scenarios": [
@@ -25,64 +29,64 @@
     },
     {
       "label": "7割ペース",
-      "value": 99.2
+      "value": 100.0
     },
     {
       "label": "5割ペース",
-      "value": 90.9
+      "value": 100.0
     },
     {
       "label": "3割ペース",
-      "value": 61.5
+      "value": 99.4
     }
   ],
   "league": [
     {
       "name": "ソフトバンク",
-      "record": "74勝52敗4分",
-      "remaining": 10,
-      "champ": 95.8,
-      "delta": null,
+      "record": "82勝45敗3分",
+      "remaining": 13,
+      "champ": 100.0,
+      "delta": 4.2,
       "me": true
     },
     {
       "name": "西武",
-      "record": "70勝56敗3分",
-      "remaining": 10,
-      "champ": 3.3,
-      "delta": null,
+      "record": "73勝55敗4分",
+      "remaining": 11,
+      "champ": 0.0,
+      "delta": -3.3,
       "me": false
     },
     {
       "name": "日本ハム",
-      "record": "69勝57敗5分",
-      "remaining": 10,
-      "champ": 0.9,
-      "delta": null,
-      "me": false
-    },
-    {
-      "name": "楽天",
-      "record": "63勝63敗3分",
-      "remaining": 10,
+      "record": "72勝57敗3分",
+      "remaining": 11,
       "champ": 0.0,
-      "delta": null,
-      "me": false
-    },
-    {
-      "name": "ロッテ",
-      "record": "58勝68敗4分",
-      "remaining": 10,
-      "champ": 0.0,
-      "delta": null,
+      "delta": -0.9,
       "me": false
     },
     {
       "name": "オリックス",
-      "record": "55勝71敗2分",
-      "remaining": 10,
+      "record": "61勝68敗2分",
+      "remaining": 12,
       "champ": 0.0,
-      "delta": null,
+      "delta": 0.0,
+      "me": false
+    },
+    {
+      "name": "ロッテ",
+      "record": "58勝65敗3分",
+      "remaining": 17,
+      "champ": 0.0,
+      "delta": 0.0,
+      "me": false
+    },
+    {
+      "name": "楽天",
+      "record": "48勝78敗1分",
+      "remaining": 16,
+      "champ": 0.0,
+      "delta": 0.0,
       "me": false
     }
   ]
