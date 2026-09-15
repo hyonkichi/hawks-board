@@ -138,6 +138,44 @@ def magic_number(teams, my_code):
     return m
 
 
+CHAMP_CAP = 99.9    # 優勝が決まるまでは 100.0 と表示しない
+CHAMP_FLOOR = 0.1   # 数学的に消滅するまでは 0.0 と表示しない
+
+
+def clinched(teams, code):
+    """優勝が確定していれば True（magic_number の簡易計算に基づく）。"""
+    return magic_number(teams, code) == 0
+
+
+def eliminated(teams, code):
+    """優勝の可能性が数学的に消えていれば True。
+
+    「残り全勝しても、どこかのチームが残り全敗した勝率に届かない」という
+    十分条件だけを見る簡易判定。直接対決の組み合わせまでは追わないので、
+    ここで False でも実際には消滅していることがある。
+    """
+    me = teams[code]
+    best = win_pct(me["w"] + me["remaining"], me["l"])
+    for c, t in teams.items():
+        if c == code:
+            continue
+        worst = win_pct(t["w"], t["l"] + t["remaining"])
+        if best < worst:
+            return True
+    return False
+
+
+def clamp_champ(value, teams, code, allow_100=False):
+    """モンテカルロの結果を表示用に丸める。
+    確定前の 100.0 は 99.9 に、消滅前の 0.0 は 0.1 に寄せる。
+    """
+    if value > CHAMP_CAP and not allow_100 and not clinched(teams, code):
+        return CHAMP_CAP
+    if value < CHAMP_FLOOR and not eliminated(teams, code):
+        return CHAMP_FLOOR
+    return value
+
+
 def current_rank(teams, my_code):
     order = sorted(teams, key=lambda c: win_pct(teams[c]["w"], teams[c]["l"]), reverse=True)
     rank = order.index(my_code) + 1
@@ -198,6 +236,8 @@ def main():
     trials = s["trials"]
 
     results = simulate(teams, remaining, s["draw_rate"], trials, s.get("seed"))
+    for r in results:
+        r["champ"] = clamp_champ(r["champ"], teams, r["code"])
     me = next(r for r in results if r["code"] == my)
     magic = magic_number(teams, my)
     rank, gb = current_rank(teams, my)
@@ -217,8 +257,9 @@ def main():
     for label, pace in SCENARIOS:
         sc = simulate(teams, remaining, s["draw_rate"], max(2000, trials // 2),
                       s.get("seed"), my_code=my, my_pace=pace)
-        scenarios.append({"label": label,
-                          "value": round(next(r["champ"] for r in sc if r["code"] == my), 1)})
+        value = next(r["champ"] for r in sc if r["code"] == my)
+        value = clamp_champ(value, teams, my, allow_100=(pace == 1.0))
+        scenarios.append({"label": label, "value": round(value, 1)})
 
     history = save_history(history, today, results)
     chart = [{"date": md(h["date"]), "value": h["champ"].get(my)}
@@ -243,6 +284,7 @@ def main():
             f"log5で求めた確率で判定し、引き分けは{s['draw_rate'] * 100:.0f}%で発生させています。"
             "先発投手、対戦カード別の相性、本拠地かどうかは考慮していません。"
             "マジックナンバーは勝ち数ベースの目安です。"
+            "優勝が決まるまでは99.9%を上限、数学的な可能性が残るあいだは0.1%を下限として表示します。"
         ),
         "history": chart,
         "scenarios": scenarios,
