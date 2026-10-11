@@ -1,6 +1,6 @@
 {
   "sample": false,
-  "updated_at": "2026-10-10T10:26:52+09:00",
+  "updated_at": "2026-10-11T09:38:05+09:00",
   "as_of": "9月15日終了時点",
   "current": 99.9,
   "delta": 4.1,
@@ -37,7 +37,7 @@
     },
     {
       "label": "3割ペース",
-      "value": 99.3
+      "value": 99.4
     }
   ],
   "league": [
@@ -50,19 +50,19 @@
       "me": true
     },
     {
-      "name": "西武",
-      "record": "73勝55敗4分",
-      "remaining": 11,
-      "champ": 0.1,
-      "delta": -3.2,
-      "me": false
-    },
-    {
       "name": "日本ハム",
       "record": "72勝57敗3分",
       "remaining": 11,
       "champ": 0.1,
       "delta": -0.8,
+      "me": false
+    },
+    {
+      "name": "西武",
+      "record": "73勝55敗4分",
+      "remaining": 11,
+      "champ": 0.1,
+      "delta": -3.2,
       "me": false
     },
     {
